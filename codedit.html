@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Language Online Code Editor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/dracula.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .editor-container {
+      margin: 20px;
+      max-width: 100%;
+    }
+
+    .output {
+      background: #222;
+      color: white;
+      padding: 10px;
+      min-height: 150px;
+      white-space: pre-wrap;
+    }
+
+    .run-btn {
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #ff4500;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .language-select {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-container">
+    <h2>Multi-Language Online Code Editor</h2>
+
+    <select id="language" class="language-select">
+      <option value="javascript">JavaScript (ES6)</option>
+      <option value="python">Python</option>
+    </select>
+
+    <textarea id="code" name="code">// Your code here</textarea>
+    <button class="run-btn" onclick="runCode()">Run Code</button>
+
+    <h3>Output:</h3>
+    <pre id="output" class="output">Output will appear here...</pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/python/python.min.js"></script>
+
+  <script>
+    let editor;
+
+    window.onload = function() {
+      editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "javascript",
+        theme: "dracula",
+        lineNumbers: true,
+        autoCloseBrackets: true
+      });
+    };
+
+    function runCode() {
+      const language = document.getElementById('language').value;
+      const code = editor.getValue();
+
+      fetch('/execute', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ language, code })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('output').innerText = data.output;
+      })
+      .catch(err => {
+        document.getElementById('output').innerText = 'Error: ' + err.message;
+      });
+    }
+  </script>
+</body>
+</html>

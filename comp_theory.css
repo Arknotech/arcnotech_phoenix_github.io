@@ -98,12 +98,14 @@ pre {
 }
 
 .nav-button {
-    background-color: #06d6a0;
+    background-color: #ef476f;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
 }
 
 .nav-button:hover {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Computational Theory Lesson - Explore the concepts, history, and activities related to Computational Theory.">
+    <title>Computational Theory | Phoenix Learning Center</title>
+    <link rel="stylesheet" href="comp_theory.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Computational Theory</h1>
+            <p>Understanding the mathematical and abstract principles of computation.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <section class="lesson">
+            <h2>What is Computational Theory?</h2>
+            <p>Computational Theory, also known as **Theory of Computation**, is a branch of computer science that deals with how efficiently problems can be solved on a computational model. This theory divides into three main branches: **Automata Theory**, **Computability Theory**, and **Complexity Theory**.</p>
+            <ul class="objectives">
+                <li><strong>Automata Theory:</strong> Studies the abstract machines or automata and the problems they can solve.</li>
+                <li><strong>Computability Theory:</strong> Examines which problems can be solved by any computational model, particularly focusing on the **Turing machine**.</li>
+                <li><strong>Complexity Theory:</strong> Investigates the efficiency of algorithms in terms of the resources (like time and space) they consume.</li>
+            </ul>
+        </section>
+
+        <section class="lesson">
+            <h2>History of Computational Theory</h2>
+            <p>The history of computational theory dates back to the early 20th century with the foundational works of **David Hilbert**. Hilbert posed questions about the limits of mathematical reasoning, which later led to the exploration of **decidability**—whether a problem could be solved algorithmically.</p>
+            <p>In the 1930s, **Alan Turing** created the concept of the **Turing Machine**, a theoretical model that became the backbone of computability theory. Turing’s work was closely followed by **Alonzo Church** who introduced the **lambda calculus** as another model of computation.</p>
+            <p>Later, in the 1970s, **Stephen Cook** and **Leonid Levin** developed **complexity theory**, introducing the now-famous class of NP-complete problems and analyzing the resources required to solve them.</p>
+        </section>
+
+        <section class="lesson">
+            <h2>Key Concepts in Computational Theory</h2>
+            <h3>1. Decidability</h3>
+            <p>Decidability refers to whether a problem can be solved by an algorithm. Some problems are **decidable**, meaning they can be solved with a definite answer, while others are **undecidable**, meaning no algorithm can solve them. A classic example of an undecidable problem is the **Halting Problem**.</p>
+
+            <h3>2. Complexity Classes</h3>
+            <p>Computational complexity theory categorizes problems based on the resources (time, space) required to solve them. The most commonly discussed complexity classes are **P** (problems that can be solved in polynomial time) and **NP** (problems whose solutions can be verified in polynomial time).</p>
+
+            <h3>3. Turing Machines</h3>
+            <p>The **Turing Machine** is a theoretical model that consists of an infinite tape and a head that reads and writes symbols based on a set of rules. Turing Machines can simulate any computational process and are the basis for defining what is computable.</p>
+        </section>
+
+        <section class="lesson">
+            <h2>Activities: Understanding Computational Theory</h2>
+
+            <h3>Activity 1: Solve the Halting Problem</h3>
+            <p>Objective: Explain why the Halting Problem is undecidable.</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Consider a program that can determine whether any other program halts (stops running).</li>
+                    <li>Now imagine a program that feeds itself as input to this halting problem solver.</li>
+                    <li>Analyze why this creates a paradox and proves that no such program can exist.</li>
+                </ol>
+                <p>Discussion: This activity helps learners understand the concept of undecidability and paradox in computation.</p>
+            </div>
+
+            <h3>Activity 2: Design a Simple Turing Machine</h3>
+            <p>Objective: Simulate a Turing Machine that reads a binary string and adds a 1 to the end.</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Start with a binary string on the tape, such as "101".</li>
+                    <li>Move the tape head to the right until the first blank symbol is found.</li>
+                    <li>Write a "1" in the blank space, and stop the machine.</li>
+                </ol>
+                <p>Test this machine with other binary inputs, like "110" or "1001".</p>
+            </div>
+
+            <h3>Activity 3: Classify Problems Based on Complexity</h3>
+            <p>Objective: Categorize a set of computational problems as **P**, **NP**, or **NP-Complete**.</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Given a list of problems (e.g., sorting an array, traveling salesman problem, checking prime numbers), classify them based on the time it takes to solve them.</li>
+                    <li>Explain why sorting an array is a P problem, while the traveling salesman problem is NP-complete.</li>
+                </ol>
+                <p>This activity helps learners understand the distinctions between computational complexity classes.</p>
+            </div>
+        </section>
+
+        <!-- Navigation Links -->
+        <section class="lesson">
+            <nav class="nav-links">
+                <a href="previous_lesson.html" class="nav-button">Previous: Automata Theory</a>
+                <a href="next_lesson.html" class="nav-button">Next: Algorithm Theory</a>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Phoenix Learning Center | <a href="/contact">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automata Theory Lesson - Explore the concepts, history, and activities related to Automata Theory.">
+    <title>Automata Theory | Phoenix Learning Center</title>
+    <link rel="stylesheet" href="auto_theory.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Automata Theory</h1>
+            <p>Dive into the foundational concepts of automata and how it shapes computational thinking.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <section class="lesson">
+            <h2>What is Automata Theory?</h2>
+            <p>Automata Theory is the study of abstract computational machines (automata) and the computational problems that can be solved using these machines. Automata serve as simplified models of computation, ranging from basic finite-state machines to more powerful models like Turing Machines.</p>
+        </section>
+
+        <section class="lesson">
+            <h2>History of Automata Theory</h2>
+            <p>Automata theory traces back to the early 20th century, with mathematical logicians such as **Alonzo Church** and **Alan Turing** laying the groundwork. Turing’s work on the Turing Machine in the 1930s was a pivotal moment, introducing a theoretical framework for understanding computation.</p>
+            <p>Later, in the 1950s and 60s, researchers like **John von Neumann** and **Noam Chomsky** expanded on these ideas, developing models for self-replicating machines and formal languages that form the foundation of computer science.</p>
+        </section>
+
+        <section class="lesson">
+            <h2>Types of Automata</h2>
+            <ul class="objectives">
+                <li><strong>Finite Automata (FA):</strong> A simple automaton used in pattern matching and lexical analysis.</li>
+                <li><strong>Pushdown Automata (PDA):</strong> Used to represent context-free languages, employing a stack to handle nested structures.</li>
+                <li><strong>Turing Machine:</strong> A more powerful model capable of solving any problem a computer can solve, fundamental to the concept of general computation.</li>
+            </ul>
+        </section>
+
+        <section class="lesson">
+            <h2>Activities: Learning Automata Through Examples</h2>
+
+            <h3>Activity 1: Design a Finite Automaton</h3>
+            <p>Objective: Design a finite automaton that accepts binary strings ending with "101".</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Draw states (circles) and label them q0, q1, q2, q3, where q3 is the accepting state.</li>
+                    <li>Create transitions between states based on reading 0 or 1 from the binary string.</li>
+                    <li>Test your automaton with inputs like "00101" and "101".</li>
+                </ol>
+                <p>Expected output: For input "101", the automaton should reach the accepting state (q3).</p>
+            </div>
+
+            <h3>Activity 2: Simulate a Pushdown Automaton</h3>
+            <p>Objective: Simulate a Pushdown Automaton (PDA) for recognizing balanced parentheses.</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Push each open parenthesis `(` onto a stack.</li>
+                    <li>Pop a parenthesis `(` from the stack when encountering a closing parenthesis `)`.</li>
+                    <li>If the stack is empty after processing the string, the parentheses are balanced.</li>
+                </ol>
+                <p>Try inputs like "(())" (balanced) and "(()" (unbalanced).</p>
+            </div>
+
+            <h3>Activity 3: Turing Machine Simulation</h3>
+            <p>Objective: Simulate a simple Turing Machine that writes a binary sequence and then flips all bits (converts 0 to 1 and 1 to 0).</p>
+            <div class="example">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Create a tape with the binary sequence (e.g., 1100).</li>
+                    <li>Move the tape head left to right, flipping each bit as you go.</li>
+                    <li>Test with different binary inputs.</li>
+                </ol>
+                <p>Expected output: For input "1100", the output should be "0011".</p>
+            </div>
+        </section>
+
+        <!-- Navigation Links -->
+        <section class="lesson">
+            <nav class="nav-links">
+                <a href="previous_lesson.html" class="nav-button">Previous: Computational Theory</a>
+                <a href="next_lesson.html" class="nav-button">Next: Algorithm Theory</a>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Arc Phoenix Learning Center | <a href="/contact">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>

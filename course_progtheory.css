@@ -1,0 +1,108 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.hero {
+    background: linear-gradient(90deg, #ef476f, #ffd166);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Main Lesson Section */
+.lesson {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #ef476f;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul.objectives {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul.objectives li {
+    margin-bottom: 10px;
+}
+
+/* Code Example Styling */
+.example {
+    background-color: #f7f7f9;
+    padding: 20px;
+    border-left: 5px solid #ef476f;
+    margin: 20px 0;
+}
+
+.example h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+pre {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: #ef476f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

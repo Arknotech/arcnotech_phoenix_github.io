@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programming Theories Lesson - Learn essential programming concepts and paradigms with practical examples.">
+    <title>Programming Theories | Phoenix Learning Center</title>
+    <link rel="stylesheet" href="course_progtheory.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Introduction to Programming Theories</h1>
+            <p>Master the foundational programming theories and paradigms with practical examples and hands-on exercises.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <section class="lesson">
+            <h2>Lesson Overview</h2>
+            <p>This lesson introduces key programming theories and paradigms to help students understand computational processes and apply them in real-world applications. By the end of this lesson, you will have a deeper grasp of essential programming concepts that are the foundation of modern software development.</p>
+        </section>
+
+        <section class="lesson">
+            <h2>Lesson Objectives</h2>
+            <ul class="objectives">
+                <li>Understand the role of programming theories in software development.</li>
+                <li>Learn the concepts of computational theory, algorithm theory, and programming paradigms.</li>
+                <li>Explore real-world applications of these theories in modern systems.</li>
+            </ul>
+        </section>
+
+        <!-- Section 1: Computational Theory -->
+        <section class="lesson">
+            <h2>1. Computational Theory</h2>
+            <h3>Automata Theory</h3>
+            <p>Automata theory studies abstract machines (automata) and their ability to solve computational problems. Common automata include Finite Automata, Pushdown Automata, and Turing Machines.</p>
+            <div class="example">
+                <h4>Example: Pattern Matching using Finite Automata</h4>
+                <p>Consider a finite automaton that recognizes the pattern "101" in a binary string.</p>
+                <pre><code>State Diagram:
+    -> q0 --1--> q1 --0--> q2 --1--> q3 (Accept)
+</code></pre>
+            </div>
+
+            <h3>Complexity Theory</h3>
+            <p>Complexity theory classifies computational problems based on their inherent difficulty, focusing on P (Polynomial Time) and NP (Nondeterministic Polynomial Time) problems.</p>
+            <div class="example">
+                <h4>Example: Solving the Shortest Path Problem</h4>
+                <p>Dijkstra's Algorithm is an example of an efficient algorithm for finding the shortest path in a graph (O(n log n) time complexity).</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Programming Paradigms -->
+        <section class="lesson">
+            <h2>2. Programming Paradigms</h2>
+            
+            <h3>Imperative Programming</h3>
+            <p>Imperative programming is a style that changes a program's state through a sequence of statements. It focuses on how the program operates, using loops, conditionals, and state changes.</p>
+            <div class="example">
+                <h4>Example: Summing an Array</h4>
+                <pre><code>int sum = 0;
+for (int i = 0; i < arr.length; i++) {
+    sum += arr[i];
+}
+</code></pre>
+            </div>
+
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <p>OOP organizes code using objects that combine data and methods. The four pillars of OOP are encapsulation, inheritance, abstraction, and polymorphism.</p>
+            <div class="example">
+                <h4>Example: A Simple Person Class</h4>
+                <pre><code>class Person {
+    String name;
+    int age;
+    
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void greet() {
+        System.out.println("Hello, my name is " + name);
+    }
+}
+</code></pre>
+            </div>
+
+            <h3>Functional Programming</h3>
+            <p>Functional programming is based on pure functions, avoiding shared state, and side effects. It treats computation as the evaluation of mathematical functions.</p>
+            <div class="example">
+                <h4>Example: Doubling an Array in JavaScript</h4>
+                <pre><code>const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8]
+</code></pre>
+            </div>
+        </section>
+
+        <!-- Section 3: Algorithm Theory -->
+        <section class="lesson">
+            <h2>3. Algorithm Theory</h2>
+            <h3>Big O Notation</h3>
+            <p>Big O Notation is used to describe the efficiency of an algorithm in terms of time and space. For example, O(n) represents linear time complexity, while O(n²) represents quadratic time complexity.</p>
+            <div class="example">
+                <h4>Example: Bubble Sort</h4>
+                <pre><code>void bubbleSort(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+        for (int j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+</code></pre>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Arc Phoenix Learning Center | <a href="/contact">Contact Us</a></p>
+    </footer>
+
+</body>
+</html>

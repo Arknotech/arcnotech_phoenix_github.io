@@ -66,3 +66,21 @@ p {
     margin-top: 20px;
     font-size: 1.5em;
 }
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #FFD700; /* Golden color for the link */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px;
+    border: 2px solid #FFD700; /* Border to match link color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #FFD700; /* Background color on hover */
+    color: #000; /* Change text color on hover */
+}
+
